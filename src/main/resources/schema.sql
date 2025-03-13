@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS HISTORIQUE;
 CREATE TABLE HISTORIQUE
 (
-    id     BIGINT AUTO_INCREMENT PRIMARY KEY,
-    number INT          NOT NULL,
-    langue VARCHAR(255) NOT NULL,
-    date VARCHAR(255) NOT NULL
+    id             BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nombre         INT         NOT NULL,
+    langue         VARCHAR(50) NOT NULL,
+    date_recherche TIMESTAMP   NOT NULL
 );
