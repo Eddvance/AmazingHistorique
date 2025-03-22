@@ -1,4 +1,4 @@
-package io.eddvance.practice.amazing_historique.controller.historique_controller;
+package io.eddvance.practice.amazing_historique.controller;
 
 
 import io.eddvance.practice.amazing_historique.entity.dto.historique_dto.HistoriqueDto;
@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/historique")
-public class HistoriqueController {
+public class HistoriqueRestController {
 
     private final HistoriqueServiceInterface historiqueService;
-
-    public HistoriqueController(HistoriqueServiceInterface historiqueService) {
+    public HistoriqueRestController(HistoriqueServiceInterface historiqueService) {
         this.historiqueService = historiqueService;
     }
 

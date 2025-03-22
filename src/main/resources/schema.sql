@@ -4,5 +4,5 @@ CREATE TABLE HISTORIQUE
     id             BIGINT PRIMARY KEY AUTO_INCREMENT,
     nombre         INT         NOT NULL,
     langue         VARCHAR(50) NOT NULL,
-    date_recherche TIMESTAMP   NOT NULL
+    local_date_time TIMESTAMP   NOT NULL
 );

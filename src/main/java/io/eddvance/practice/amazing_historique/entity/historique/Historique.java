@@ -2,7 +2,7 @@ package io.eddvance.practice.amazing_historique.entity.historique;
 
 import jakarta.persistence.*;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "historique")
@@ -15,16 +15,16 @@ public class Historique {
     private int nombre;
     @Column(nullable = false, name = "langue")
     private String langue;
-    @Column(nullable = false, name = "localTime")
-    private LocalTime localTime;
+    @Column(nullable = false, name = "local_date_time")
+    private LocalDateTime localDateTime;
 
     public Historique() {
     }
 
-    public Historique(int nombre, String langue, LocalTime localTime) {
+    public Historique(int nombre, String langue, LocalDateTime localdateTime) {
         this.nombre = nombre;
         this.langue = langue;
-        this.localTime = localTime;
+        this.localDateTime = localdateTime;
     }
 
     public Long getId() {
@@ -51,11 +51,11 @@ public class Historique {
         this.langue = langue;
     }
 
-    public LocalTime getLocalTime() {
-        return localTime;
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
     }
 
-    public void setLocalTime(LocalTime localTime) {
-        this.localTime = localTime;
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 }

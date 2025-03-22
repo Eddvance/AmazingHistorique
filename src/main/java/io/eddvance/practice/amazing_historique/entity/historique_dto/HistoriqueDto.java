@@ -1,4 +1,4 @@
-package io.eddvance.practice.amazing_historique.entity.dto.historique_dto;
+package io.eddvance.practice.amazing_historique.entity.historique_dto;
 
 import java.time.LocalDateTime;
 
@@ -6,16 +6,16 @@ public class HistoriqueDto {
     private Long id;
     private Integer nombre;
     private String langue;
-    private LocalDateTime dateRecherche;
+    private LocalDateTime localDateTime;
 
     public HistoriqueDto() {
     }
 
-    public HistoriqueDto(Long id, Integer nombre, String langue, LocalDateTime dateRecherche) {
+    public HistoriqueDto(Long id, Integer nombre, String langue, LocalDateTime localDateTime) {
         this.id = id;
         this.nombre = nombre;
         this.langue = langue;
-        this.dateRecherche = dateRecherche;
+        this.localDateTime = localDateTime;
     }
 
     public Long getId() {
@@ -38,11 +38,11 @@ public class HistoriqueDto {
         this.langue = langue;
     }
 
-    public LocalDateTime getDateRecherche() {
-        return dateRecherche;
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
     }
 
-    public void setDateRecherche(LocalDateTime dateRecherche) {
-        this.dateRecherche = dateRecherche;
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 }

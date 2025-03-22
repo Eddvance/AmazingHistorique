@@ -1,12 +1,12 @@
 package io.eddvance.practice.amazing_historique.service;
 
-import io.eddvance.practice.amazing_historique.entity.dto.historique_dto.HistoriqueDto;
 import io.eddvance.practice.amazing_historique.entity.historique.Historique;
+import io.eddvance.practice.amazing_historique.entity.historique_dto.HistoriqueDto;
 import io.eddvance.practice.amazing_historique.repository.HistoriqueRepositoryInterface;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,9 +21,9 @@ public class HistoriqueService implements HistoriqueServiceInterface {
 
     @Override
     public void newHistorique(HistoriqueDto historiqueDto) {
-        Historique historique = new Historique(historiqueDto.getNombre(), historiqueDto.getLangue(), LocalTime.now());
+        Historique historique = new Historique(historiqueDto.getNombre(), historiqueDto.getLangue(), LocalDateTime.now());
         historiqueRepository.save(historique);
-        System.out.println(">> Historique inséré : id=" + historique.getId() + ", langue=" + historique.getLangue() + ", nombre=" + historique.getNombre() + ", dateRecherche=" + historique.getLocalTime());
+        System.out.println(">> Historique inséré : id=" + historique.getId() + ", langue=" + historique.getLangue() + ", nombre=" + historique.getNombre() + ", localDateTime=" + historique.getLocalDateTime());
     }
 
     @Override
