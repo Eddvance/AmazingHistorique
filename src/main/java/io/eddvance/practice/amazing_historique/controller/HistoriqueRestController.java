@@ -1,7 +1,7 @@
 package io.eddvance.practice.amazing_historique.controller;
 
 
-import io.eddvance.practice.amazing_historique.entity.dto.historique_dto.HistoriqueDto;
+import io.eddvance.practice.amazing_historique.entity.historique_dto.HistoriqueDto;
 import io.eddvance.practice.amazing_historique.service.HistoriqueServiceInterface;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
