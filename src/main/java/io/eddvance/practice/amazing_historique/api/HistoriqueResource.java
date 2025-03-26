@@ -14,6 +14,7 @@ import java.util.List;
 public class HistoriqueResource {
 
     private final HistoriqueServiceInterface historiqueService;
+
     public HistoriqueResource(HistoriqueServiceInterface historiqueService) {
         this.historiqueService = historiqueService;
     }
