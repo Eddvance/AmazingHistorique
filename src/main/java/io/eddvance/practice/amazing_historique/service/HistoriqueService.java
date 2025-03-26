@@ -6,8 +6,12 @@ import io.eddvance.practice.amazing_historique.repository.HistoriqueRepositoryIn
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -28,6 +32,16 @@ public class HistoriqueService implements HistoriqueServiceInterface {
 
     @Override
     public List<HistoriqueDto> getAllHistorique() {
-        return List.of();
+        List<Historique> historiques = historiqueRepository.findAll();
+        List<HistoriqueDto> list = new ArrayList<>();
+        for (Historique historique : historiques) {
+            HistoriqueDto historiqueDto = new HistoriqueDto(
+                    historique.getId(),
+                    historique.getNombre(),
+                    historique.getLangue(),
+                    historique.getLocalDateTime());
+            list.add(historiqueDto);
+        }
+        return list;
     }
 }

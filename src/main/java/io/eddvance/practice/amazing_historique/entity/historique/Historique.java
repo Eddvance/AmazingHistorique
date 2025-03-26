@@ -3,6 +3,7 @@ package io.eddvance.practice.amazing_historique.entity.historique;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "historique")

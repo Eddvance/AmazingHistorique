@@ -1,4 +1,4 @@
-package io.eddvance.practice.amazing_historique.controller;
+package io.eddvance.practice.amazing_historique.api;
 
 
 import io.eddvance.practice.amazing_historique.entity.historique_dto.HistoriqueDto;
@@ -11,10 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/historique")
-public class HistoriqueRestController {
+public class HistoriqueResource {
 
     private final HistoriqueServiceInterface historiqueService;
-    public HistoriqueRestController(HistoriqueServiceInterface historiqueService) {
+    public HistoriqueResource(HistoriqueServiceInterface historiqueService) {
         this.historiqueService = historiqueService;
     }
 
